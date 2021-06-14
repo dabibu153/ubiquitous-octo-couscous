@@ -28,6 +28,10 @@ io.on("connection", (socket) => {
     })
     .on("url", (arg) => {
       io.emit("url", arg);
+    })
+    .on("soundPosition", (arg) => {
+      console.log(arg);
+      io.emit("sound-value", arg);
     });
 });
 
